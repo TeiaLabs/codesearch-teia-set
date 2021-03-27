@@ -1,34 +1,35 @@
 // Priority Queue Helper functions
+// Get the parent node of the current node
 function getParentPosition (position) {
-  // Get the parent node of the current node
   return Math.floor((position - 1) / 2)
 }
+
+// Get the children nodes of the current node
 function getChildrenPosition (position) {
-  // Get the children nodes of the current node
   return [2 * position + 1, 2 * position + 2]
 }
 
+// Priority Queue class using Minimum Binary Heap
 class PriorityQueue {
-  // Priority Queue class using Minimum Binary Heap
   constructor () {
     this._heap = []
     this.keys = {}
   }
 
+  // Checking if the heap is empty
   isEmpty () {
-    // Checking if the heap is empty
     return this._heap.length === 0
   }
 
+  // Adding element to the queue (equivalent to add)
   push (key, priority) {
-    // Adding element to the queue (equivalent to add)
     this._heap.push([key, priority])
     this.keys[key] = this._heap.length - 1
     this._shiftUp(this.keys[key])
   }
 
+  // Removing the element with least priority (equivalent to extractMin)
   pop () {
-    // Removing the element with least priority (equivalent to extractMin)
     this._swap(0, this._heap.length - 1)
     const [key] = this._heap.pop()
     delete this.keys[key]
@@ -36,13 +37,13 @@ class PriorityQueue {
     return key
   }
 
+  // Check if a given key is present in the queue
   contains (key) {
-    // Check if a given key is present in the queue
     return (key in this.keys)
   }
 
+  // Update the priority of the given element (equivalent to decreaseKey)
   update (key, priority) {
-    // Update the priority of the given element (equivalent to decreaseKey)
     const currPos = this.keys[key]
     this._heap[currPos][1] = priority
     const parentPos = getParentPosition(currPos)
@@ -68,8 +69,8 @@ class PriorityQueue {
     }
   }
 
+  // Helper function to shift up a node to proper position (equivalent to bubbleUp)
   _shiftUp (position) {
-    // Helper function to shift up a node to proper position (equivalent to bubbleUp)
     let currPos = position
     let parentPos = getParentPosition(currPos)
     let currPriority = this._heap[currPos][1]
@@ -92,8 +93,8 @@ class PriorityQueue {
     this.keys[this._heap[currPos][0]] = currPos
   }
 
+  // Helper function to shift down a node to proper position (equivalent to bubbleDown)
   _shiftDown (position) {
-    // Helper function to shift down a node to proper position (equivalent to bubbleDown)
     let currPos = position
     let [child1Pos, child2Pos] = getChildrenPosition(currPos)
     let [child1Priority, child2Priority] = [Infinity, Infinity]
@@ -135,36 +136,35 @@ class PriorityQueue {
     }
   }
 
+  // Helper function to swap 2 nodes
   _swap (position1, position2) {
-    // Helper function to swap 2 nodes
     [this._heap[position1], this._heap[position2]] = [this._heap[position2], this._heap[position1]]
     this.keys[this._heap[position1][0]] = position1
     this.keys[this._heap[position2][0]] = position2
   }
 }
 
+// Weighted Undirected Graph class
 class GraphWeightedUndirectedAdjacencyList {
-  // Weighted Undirected Graph class
   constructor () {
     this.connections = {}
   }
 
+  // Function to add a node to the graph (connection represented by set)
   addNode (node) {
-    // Function to add a node to the graph (connection represented by set)
     this.connections[node] = {}
   }
 
+  // Function to add an edge (adds the node too if they are not present in the graph)
   addEdge (node1, node2, weight) {
-    // Function to add an edge (adds the node too if they are not present in the graph)
     if (!(node1 in this.connections)) { this.addNode(node1) }
     if (!(node2 in this.connections)) { this.addNode(node2) }
     this.connections[node1][node2] = weight
     this.connections[node2][node1] = weight
   }
 
+  // Prim's Algorithm to generate a Minimum Spanning Tree (MST) of a graph
   PrimMST (start) {
-    // Prim's Algorithm to generate a Minimum Spanning Tree (MST) of a graph
-    // Details: https://en.wikipedia.org/wiki/Prim%27s_algorithm
     const distance = {}
     const parent = {}
     const priorityQueue = new PriorityQueue()

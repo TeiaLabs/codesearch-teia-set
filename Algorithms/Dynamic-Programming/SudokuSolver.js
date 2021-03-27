@@ -10,6 +10,7 @@ const _board = [
   ['3', '.', '.', '.', '9', '.', '.', '.', '.']
 ]
 
+// Test if the board position is valid 
 const isValid = (board, row, col, k) => {
   for (let i = 0; i < 9; i++) {
     const m = 3 * Math.floor(row / 3) + Math.floor(i / 3)
@@ -21,6 +22,7 @@ const isValid = (board, row, col, k) => {
   return true
 }
 
+// function to solve a sudoku board
 const sodokoSolver = (data) => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {

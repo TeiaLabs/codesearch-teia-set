@@ -1,17 +1,6 @@
 /*
- * A simple helper function that checks, if the array is
- * sorted in ascending order.
+ * Check if the array is sorted in ascending order
  */
-
-// > [].isSorted()
-// true
-// > [1].isSorted()
-// true
-// > [1,2,3].isSorted()
-// true
-// > [3,2,1].isSorted()
-// false
-/* eslint no-extend-native: ["off", { "exceptions": ["Object"] }] */
 Array.prototype.isSorted = function () {
   const length = this.length
   for (let i = 0; i < length - 1; i++) {
@@ -23,7 +12,7 @@ Array.prototype.isSorted = function () {
 }
 
 /*
- * A simple helper function to shuffle the array randomly in place.
+ * Function to shuffle the array randomly in place.
  */
 Array.prototype.shuffle = function () {
   for (let i = this.length - 1; i; i--) {
@@ -35,9 +24,7 @@ Array.prototype.shuffle = function () {
 }
 
 /*
- * Implementation of the bogosort algorithm. This sorting algorithm randomly
- * rearranges the array until it is sorted.
- * For more information see: https://en.wikipedia.org/wiki/Bogosort
+ * Implementation of the bogosort algorithm
  */
 function bogoSort (items) {
   while (!items.isSorted()) {
@@ -46,7 +33,6 @@ function bogoSort (items) {
   return items
 }
 
-// Implementation of bogoSort
 
 const ar = [5, 6, 7, 8, 1, 2, 12, 14]
 // Array before Sort

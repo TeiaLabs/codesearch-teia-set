@@ -1,21 +1,5 @@
 /*
-  Function that takes a string input and return either true or false
-  If it is a valid email address
-*/
-
-/*
-*  Doctests
-*
-* > validateEmail('mahfoudh.arous@gmail.com')
-*  true
-* > validateEmail('mahfoudh.arous@helsinki.edu')
-*  true
-* > validateEmail('mahfoudh.arous.com')
-*  false
-* > validateEmail('')
-*  ! TypeError
-* > validateEmail(null)
-*  ! TypeError
+  Function to valid email address
 */
 const validateEmail = (str) => {
   if (str === '' || str === null) {

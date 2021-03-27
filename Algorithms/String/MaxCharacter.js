@@ -1,5 +1,5 @@
 /*
-  Given a string of characters, return the character that appears the most often.
+  Identtify the most often character for a string
   Example: input = "Hello World!" return "l"
 */
 const maxCharacter = (value) => {

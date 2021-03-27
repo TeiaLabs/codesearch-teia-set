@@ -1,3 +1,4 @@
+// Converting integer to Hexadecimal values
 function intToHex (num) {
   switch (num) {
     case 10: return 'A'
@@ -9,7 +10,7 @@ function intToHex (num) {
   }
   return num
 }
-
+// Converting Decimal to Hexadecimal values
 function decimalToHex (num) {
   const hexOut = []
   while (num > 15) {

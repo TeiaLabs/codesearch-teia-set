@@ -1,9 +1,5 @@
-/*
-* Radix sorts an integer array without comparing the integers.
-* It groups the integers by their digits which share the same
-* significant position.
-* For more information see: https://en.wikipedia.org/wiki/Radix_sort
-*/
+// Implementation of radixSort
+
 function radixSort (items, RADIX) {
   // default radix is then because we usually count to base 10
   if (RADIX === undefined || RADIX < 1) {
@@ -42,7 +38,6 @@ function radixSort (items, RADIX) {
   return items
 }
 
-// Implementation of radixSort
 
 var ar = [5, 6, 7, 8, 1, 2, 12, 14]
 // Array before Sort

@@ -1,3 +1,4 @@
+// Converting Hexadecimal string to RGB values (color)
 function hexStringToRGB (hexString) {
   var r = hexString.substring(0, 2)
   var g = hexString.substring(2, 4)

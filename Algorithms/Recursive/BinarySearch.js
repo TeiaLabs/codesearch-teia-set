@@ -1,5 +1,4 @@
 
-// https://en.wikipedia.org/wiki/Binary_search_algorithm
 // Search the integer inside the sorted integers array using Binary Search Algorithm
 
 const BinarySearch = (intArr, searchQuery) => {

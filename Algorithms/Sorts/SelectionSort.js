@@ -1,12 +1,4 @@
-/* The selection sort algorithm sorts an array by repeatedly finding the minimum element
- *(considering ascending order) from unsorted part and putting it at the beginning. The
- *algorithm maintains two subarrays in a given array.
- *1) The subarray which is already sorted.
- *2) Remaining subarray which is unsorted.
- *
- *In every iteration of selection sort, the minimum element (considering ascending order)
- *from the unsorted subarray is picked and moved to the sorted subarray.
- */
+// Implementation of Selection Sort
 
 const selectionSort = (list) => {
   if (!Array.isArray(list)) {
@@ -34,17 +26,5 @@ const selectionSort = (list) => {
   return items
 }
 
-/* Implementation of Selection Sort
-
-(() => {
-  let array = [5, 6, 7, 8, 1, 2, 12, 14]
-  // Array before Sort
-  console.log(array)
-  array = selectionSort(array)
-  // Array after sort
-  console.log(array)
-})()
-
-*/
 
 export { selectionSort }

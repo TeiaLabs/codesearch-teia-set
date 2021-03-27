@@ -1,3 +1,4 @@
+// Define Roman numerals and algebraic numbers.
 var values = {
   I: 1,
   V: 5,
@@ -8,6 +9,7 @@ var values = {
   M: 1000
 }
 
+// Converting Roman numerals to decimal values
 function romanToDecimal (romanNumber) {
   let prev = ' '
 

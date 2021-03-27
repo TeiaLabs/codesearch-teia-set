@@ -1,8 +1,4 @@
-/**
- * A Dynamic Programming based solution for calculation of the Levenshtein Distance
- * https://en.wikipedia.org/wiki/Levenshtein_distance
- */
-
+// Select the minimum value between 3 parameters
 function minimum (a, b, c) {
   if (a < b && a < c) {
     return a
@@ -17,6 +13,9 @@ function costOfSubstitution (x, y) {
   return x === y ? 0 : 1
 }
 
+/**
+ * A Dynamic Programming based solution for calculation of the Levenshtein Distance
+ */
 function calculate (x, y) {
   const dp = new Array(x.length + 1)
   for (let i = 0; i < x.length + 1; i++) {

@@ -12,8 +12,8 @@ async function getStockPrice (stockSymbol) {
   return parseFloat(dom.window.document.querySelectorAll('td')[2].textContent.replace(/,/g, ''))
 }
 
+// Using async await to ensure synchronous behaviour for get stock price from many sources
 async function main () {
-  // Using async await to ensure synchronous behaviour
   await getStockPrice('GOOGL')
     .then(response => console.log(`GOOGL stock price: $ ${response}`))
 

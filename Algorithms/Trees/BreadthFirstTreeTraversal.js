@@ -2,7 +2,6 @@
   Breadth First Tree Traversal or level order traversal implementation in javascript
   Author: @GerardUbuntu
 */
-
 class Node {
   constructor (data) {
     this.data = data

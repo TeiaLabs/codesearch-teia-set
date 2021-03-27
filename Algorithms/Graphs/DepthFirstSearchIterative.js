@@ -1,24 +1,24 @@
+// Unweighted Undirected Graph class
 class GraphUnweightedUndirected {
-  // Unweighted Undirected Graph class
   constructor () {
     this.connections = {}
   }
 
+  // Function to add a node to the graph (connection represented by set)
   addNode (node) {
-    // Function to add a node to the graph (connection represented by set)
     this.connections[node] = new Set()
   }
 
+  // Function to add an edge (adds the node too if they are not present in the graph)
   addEdge (node1, node2) {
-    // Function to add an edge (adds the node too if they are not present in the graph)
     if (!(node1 in this.connections)) { this.addNode(node1) }
     if (!(node2 in this.connections)) { this.addNode(node2) }
     this.connections[node1].add(node2)
     this.connections[node2].add(node1)
   }
 
+  // DFS Function to search if a node with the given value is present in the graph
   DFSIterative (node, value) {
-    // DFS Function to search if a node with the given value is present in the graph
     const stack = [node]
     const visited = new Set()
     while (stack.length > 0) {

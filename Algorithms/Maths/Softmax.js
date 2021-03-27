@@ -1,5 +1,4 @@
-// Wikipedia: https://en.wikipedia.org/wiki/Softmax_function
-
+// Calcule the Softmax value
 const Softmax = (inputs) => {
   const eulerExpOfAllInputs = inputs.map(input => Math.exp(input))
   const sumOfEulerExpOfAllInputs = eulerExpOfAllInputs.reduce((a, b) => a + b)

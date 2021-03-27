@@ -8,7 +8,6 @@
 var LinearAlgebra;
 (function (LinearAlgebra) {
   /*
-        class: Vector
         This class represents a vector of arbitrary size and operations on it.
     */
   var Vector = /** @class */ (function () {

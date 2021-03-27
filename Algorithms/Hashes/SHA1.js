@@ -1,11 +1,6 @@
 //= ===============================================================
-// SHA1.js
-//
 // Module that replicates the SHA-1 Cryptographic Hash
-// function in Javascript.
 //= ===============================================================
-
-// main variables
 const CHAR_SIZE = 8
 
 /**

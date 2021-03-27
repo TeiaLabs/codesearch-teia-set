@@ -1,5 +1,5 @@
+// Double Linked List Node built specifically for LRU Cache
 class DoubleLinkedListNode {
-  // Double Linked List Node built specifically for LRU Cache
   constructor (key, val) {
     this.key = key
     this.val = val
@@ -8,8 +8,8 @@ class DoubleLinkedListNode {
   }
 }
 
+// Double Linked List built specifically for LRU Cache
 class DoubleLinkedList {
-  // Double Linked List built specifically for LRU Cache
   constructor () {
     this.head = new DoubleLinkedListNode(null, null)
     this.rear = new DoubleLinkedListNode(null, null)
@@ -17,8 +17,8 @@ class DoubleLinkedList {
     this.rear.prev = this.head
   }
 
+  // Adds the given node to the end of the list (before rear)
   add (node) {
-    // Adds the given node to the end of the list (before rear)
     const temp = this.rear.prev
     temp.next = node
     node.prev = temp
@@ -26,8 +26,8 @@ class DoubleLinkedList {
     node.next = this.rear
   }
 
+  // Removes and returns the given node from the list
   remove (node) {
-    // Removes and returns the given node from the list
     const tempLast = node.prev
     const tempNext = node.next
     node.prev = null
@@ -39,8 +39,8 @@ class DoubleLinkedList {
   }
 }
 
+// LRU Cache to store a given capacity of data
 class LRUCache {
-  // LRU Cache to store a given capacity of data
   constructor (capacity) {
     this.list = new DoubleLinkedList()
     this.capacity = capacity
@@ -50,13 +50,13 @@ class LRUCache {
     this.cache = {}
   }
 
+  // Return the details for the cache instance [hits, misses, capacity, current_size]
   cacheInfo () {
-    // Return the details for the cache instance [hits, misses, capacity, current_size]
     return `CacheInfo(hits=${this.hits}, misses=${this.miss}, capacity=${this.capacity}, current size=${this.numKeys})`
   }
 
+  // Sets the value for the input key and updates the Double Linked List
   set (key, value) {
-    // Sets the value for the input key and updates the Double Linked List
     if (!(key in this.cache)) {
       if (this.numKeys >= this.capacity) {
         const keyToDelete = this.list.head.next.key
@@ -74,8 +74,8 @@ class LRUCache {
     }
   }
 
+  // Returns the value for the input key and updates the Double Linked List. Returns null if key is not present in cache
   get (key) {
-    // Returns the value for the input key and updates the Double Linked List. Returns null if key is not present in cache
     if (key in this.cache) {
       this.hits += 1
       this.list.add(this.list.remove(this.cache[key]))
@@ -86,8 +86,8 @@ class LRUCache {
   }
 }
 
+// Example 1 (Small Cache)
 function main () {
-  // Example 1 (Small Cache)
   const cache = new LRUCache(2)
   cache.set(1, 1)
   cache.set(2, 2)

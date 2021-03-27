@@ -1,8 +1,6 @@
 /**
  * A Dynamic Programming based solution for calculating Zero One Knapsack
- * https://en.wikipedia.org/wiki/Knapsack_problem
  */
-
 const zeroOneKnapsack = (arr, n, cap, cache) => {
   if (cap === 0 || n === 0) {
     cache[n][cap] = 0
@@ -20,14 +18,8 @@ const zeroOneKnapsack = (arr, n, cap, cache) => {
   }
 }
 
-const main = () => {
-  /*
-  Problem Statement:
-  You are a thief carrying a single bag with limited capacity S. The museum you stole had N artifact that you could steal. Unfortunately you might not be able to steal all the artifact because of your limited bag capacity.
-  You have to cherry pick the artifact in order to maximize the total value of the artifacts you stole.
 
-  Link for the Problem: https://www.hackerrank.com/contests/srin-aadc03/challenges/classic-01-knapsack
-  */
+const main = () => {
   let input = `1
     4 5
     1 8

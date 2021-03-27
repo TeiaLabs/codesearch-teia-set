@@ -1,13 +1,9 @@
-/* Stack!!
+/* Stack
 * A stack is exactly what it sounds like. An element gets added to the top of
 * the stack and only the element on the top may be removed. This is an example
 * of an array implementation of a Stack. So an element can only be added/removed
 * from the end of the array.
 */
-
-// Functions: push, pop, peek, view, length
-
-// Creates a stack constructor
 var Stack = (function () {
   function Stack () {
     // The top of the Stack

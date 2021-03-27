@@ -1,11 +1,11 @@
+// Sudoku Class to hold the board and related functions
 class Sudoku {
-  // Sudoku Class to hold the board and related functions
   constructor (board) {
     this.board = board
   }
 
+  // Find a empty cell in the board (returns [-1, -1] if all cells are filled)
   findEmptyCell () {
-    // Find a empty cell in the board (returns [-1, -1] if all cells are filled)
     for (let i = 0; i < 9; i++) {
       for (let j = 0; j < 9; j++) {
         if (this.board[i][j] === 0) return [i, j]
@@ -14,8 +14,8 @@ class Sudoku {
     return [-1, -1]
   }
 
+  // checks if the value to be added in the board is an acceptable value for the cell
   check ([y, x], value) {
-    // checks if the value to be added in the board is an acceptable value for the cell
 
     // checking through the row
     for (let i = 0; i < 9; i++) {
@@ -38,10 +38,10 @@ class Sudoku {
     return true
   }
 
+  // checking if the board is complete
   solve () {
     const [y, x] = this.findEmptyCell()
 
-    // checking if the board is complete
     if (y === -1 && x === -1) return true
 
     for (let val = 1; val < 10; val++) {
@@ -60,8 +60,8 @@ class Sudoku {
     return this.board[row].slice(start, end)
   }
 
+  // helper function to display board
   printBoard () {
-    // helper function to display board
     for (let i = 0; i < 9; i++) {
       if (i % 3 === 0 && i !== 0) console.log('- - - - - - - - - - - -')
       console.log(
@@ -72,8 +72,8 @@ class Sudoku {
   }
 }
 
+// main function with sudoku example
 function main () {
-  // main function with an example
   const sudokuBoard = new Sudoku([
     [3, 0, 6, 5, 0, 8, 4, 0, 0],
     [5, 2, 0, 0, 0, 0, 0, 0, 0],

@@ -1,3 +1,4 @@
+// Converting Decimal to Octadecimal values
 function decimalToOctal (num) {
   let oct = 0
   let c = 0

@@ -1,3 +1,4 @@
+// Convert a number tto binary
 const BinaryConvert = (number) => {
   const result = []
   let i

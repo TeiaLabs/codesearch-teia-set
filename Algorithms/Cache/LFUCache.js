@@ -1,5 +1,5 @@
+// Double Linked List Node built specifically for LFU Cache
 class DoubleLinkedListNode {
-  // Double Linked List Node built specifically for LFU Cache
   constructor (key, val) {
     this.key = key
     this.val = val
@@ -9,8 +9,8 @@ class DoubleLinkedListNode {
   }
 }
 
+// Double Linked List built specifically for LFU Cache
 class DoubleLinkedList {
-  // Double Linked List built specifically for LFU Cache
   constructor () {
     this.head = new DoubleLinkedListNode(null, null)
     this.rear = new DoubleLinkedListNode(null, null)
@@ -18,8 +18,8 @@ class DoubleLinkedList {
     this.rear.prev = this.head
   }
 
+  // Helper function to position a node based on the frequency of the key
   _positionNode (node) {
-    // Helper function to position a node based on the frequency of the key
     while (node.prev.key && node.prev.freq > node.freq) {
       const node1 = node
       const node2 = node.prev
@@ -30,8 +30,8 @@ class DoubleLinkedList {
     }
   }
 
+  // Adds the given node to the end of the list (before rear) and positions it based on frequency
   add (node) {
-    // Adds the given node to the end of the list (before rear) and positions it based on frequency
     const temp = this.rear.prev
     temp.next = node
     node.prev = temp
@@ -40,8 +40,8 @@ class DoubleLinkedList {
     this._positionNode(node)
   }
 
+  // Removes and returns the given node from the list
   remove (node) {
-    // Removes and returns the given node from the list
     const tempLast = node.prev
     const tempNext = node.next
     node.prev = null
@@ -53,11 +53,11 @@ class DoubleLinkedList {
   }
 }
 
+// LFU Cache to store a given capacity of data
+// The Double Linked List is used to store the order of deletion from the cache
+// The rear.prev holds the most frequently used key and the head.next holds the least used key
+// When the number of elements reaches the capacity, the least frequently used item is removed before adding the next key
 class LFUCache {
-  // LFU Cache to store a given capacity of data
-  // The Double Linked List is used to store the order of deletion from the cache
-  // The rear.prev holds the most frequently used key and the head.next holds the least used key
-  // When the number of elements reaches the capacity, the least frequently used item is removed before adding the next key
   constructor (capacity) {
     this.list = new DoubleLinkedList()
     this.capacity = capacity
@@ -67,13 +67,13 @@ class LFUCache {
     this.cache = {}
   }
 
+  // Return the details for the cache instance [hits, misses, capacity, current_size]
   cacheInfo () {
-    // Return the details for the cache instance [hits, misses, capacity, current_size]
     return `CacheInfo(hits=${this.hits}, misses=${this.miss}, capacity=${this.capacity}, current size=${this.numKeys})`
   }
 
+  // Sets the value for the input key and updates the Double Linked List
   set (key, value) {
-    // Sets the value for the input key and updates the Double Linked List
     if (!(key in this.cache)) {
       if (this.numKeys >= this.capacity) {
         const keyToDelete = this.list.head.next.key
@@ -91,8 +91,8 @@ class LFUCache {
     }
   }
 
+  // Returns the value for the input key and updates the Double Linked List. Returns null if key is not present in cache
   get (key) {
-    // Returns the value for the input key and updates the Double Linked List. Returns null if key is not present in cache
     if (key in this.cache) {
       this.hits += 1
       this.list.add(this.list.remove(this.cache[key]))
@@ -103,8 +103,8 @@ class LFUCache {
   }
 }
 
+// Example 1 (Small Cache)
 function main () {
-  // Example 1 (Small Cache)
   const cache = new LFUCache(2)
   cache.set(1, 1)
   cache.set(2, 2)

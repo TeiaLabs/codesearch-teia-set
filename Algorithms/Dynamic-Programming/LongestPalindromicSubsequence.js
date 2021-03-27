@@ -1,11 +1,8 @@
 /*
-  LeetCode -> https://leetcode.com/problems/longest-palindromic-subsequence/
-
+  longest palindromic subsequence
   Given a string s, find the longest palindromic subsequence's length in s.
   You may assume that the maximum length of s is 1000.
-
 */
-
 const longestPalindromeSubsequence = function (s) {
   const n = s.length
 

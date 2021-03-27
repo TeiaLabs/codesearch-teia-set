@@ -4,9 +4,6 @@
 * system, where the first item to enter the queue is the first to be removed. This
 * implementation uses an array to store the queue.
 */
-
-// Functions: enqueue, dequeue, peek, view, length
-
 const Queue = (function () {
   // constructor
   function Queue () {

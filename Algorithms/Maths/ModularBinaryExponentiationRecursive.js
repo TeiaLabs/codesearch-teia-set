@@ -1,11 +1,6 @@
 /*
-  Modified from:
-    https://github.com/TheAlgorithms/Python/blob/master/maths/binary_exp_mod.py
-
-  Explaination:
-    https://en.wikipedia.org/wiki/Exponentiation_by_squaring
+  Exponentiation by squaring binary values
 */
-
 const modularBinaryExponentiation = (a, n, m) => {
   // input: a: int, n: int, m: int
   // returns: (a^n) % m: int

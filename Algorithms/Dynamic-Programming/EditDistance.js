@@ -1,15 +1,7 @@
 /*
-Wikipedia -> https://en.wikipedia.org/wiki/Edit_distance
-
-Q. -> Given two strings `word1` and `word2`. You can perform these operations on any of the string to make both strings similar.
-    - Insert
-    - Remove
-    - Replace
+Edit distance way of quantifying how dissimilar two strings
+Given two strings `word1` and `word2`. You can perform these operations on any of the string to make both strings similar.
 Find the minimum operation cost required to make both same. Each operation cost is 1.
-
-Algorithm details ->
-time complexity - O(n*m)
-space complexity - O(n*m)
 */
 
 const minimumEditDistance = (word1, word2) => {
@@ -22,7 +14,6 @@ const minimumEditDistance = (word1, word2) => {
         - first row is filled considering no elements in word2.
         - first column filled considering no elements in word1.
     */
-
   for (let i = 0; i < n + 1; i++) {
     dp[0][i] = i
   }
@@ -32,9 +23,8 @@ const minimumEditDistance = (word1, word2) => {
   }
 
   /*
-        indexing is 1 based for dp matrix as we defined some known values at first row and first column/
+    indexing is 1 based for dp matrix as we defined some known values at first row and first column/
     */
-
   for (let i = 1; i < m + 1; i++) {
     for (let j = 1; j < n + 1; j++) {
       const letter1 = word1[j - 1]

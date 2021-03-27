@@ -1,11 +1,8 @@
 /*
+Check if there is pattern 
 Pattern matching is case insensitive as
 the inputs are converted to lower case before the
 algorithm is run.
-
-The algorithm will run through the entire text and
-return the starting index if the given pattern is
-available in the text
 */
 const checkIfPatternExists = (text, pattern) => {
   if (typeof text !== 'string' || typeof pattern !== 'string') {

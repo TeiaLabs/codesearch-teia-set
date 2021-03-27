@@ -1,5 +1,6 @@
 'use strict'
 
+// Permutate a string
 const permutate = (aString) => {
   if (typeof aString !== 'string' || !aString) {
     throw new Error('The arg must be a valid, non empty string')
@@ -16,6 +17,7 @@ const permutate = (aString) => {
     .sort()
 }
 
+// calculate Current Character Permutation
 const calculateCurrentCharacterPermutation = (allPermutations, currentCharacter) => {
   const currentPermutations = []
   allPermutations.map(permutation => {

@@ -1,3 +1,4 @@
+// Converting Binary to Decimal values
 const binaryToDecimal = (binaryString) => {
   let decimalNumber = 0
   const binaryDigits = binaryString.split('').reverse() // Splits the binary number into reversed single digits

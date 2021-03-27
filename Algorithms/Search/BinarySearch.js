@@ -1,12 +1,4 @@
-/* Binary Search: https://en.wikipedia.org/wiki/Binary_search_algorithm
- *
- * Search a sorted array by repeatedly dividing the search interval
- * in half. Begin with an interval covering the whole array. If the value of the
- * search key is less than the item in the middle of the interval, narrow the interval
- * to the lower half. Otherwise narrow it to the upper half. Repeatedly check until the
- * value is found or the interval is empty.
- */
-
+// Binary Search algorithm
 function binarySearch (arr, x, low = 0, high = arr.length - 1) {
   const mid = Math.floor(low + (high - low) / 2)
 

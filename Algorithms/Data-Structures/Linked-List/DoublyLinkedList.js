@@ -1,4 +1,4 @@
-// Hamza chabchoub contribution for a university project
+// Double linked list
 function DoubleLinkedList () {
   const Node = function (element) {
     this.element = element

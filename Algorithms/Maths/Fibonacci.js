@@ -1,5 +1,6 @@
 const list = []
 
+//  Fibonacci sequence (Iterative), such that each number is the sum of the two preceding ones, starting from 0 and 1.
 const FibonacciIterative = (nth) => {
   const sequence = []
 
@@ -13,6 +14,7 @@ const FibonacciIterative = (nth) => {
   return sequence
 }
 
+//  Fibonacci sequence (Recursive), such that each number is the sum of the two preceding ones, starting from 0 and 1.
 const FibonacciRecursive = (number) => {
   return (() => {
     switch (list.length) {
@@ -33,6 +35,7 @@ const FibonacciRecursive = (number) => {
 
 const dict = new Map()
 
+//  Fibonacci sequence (Recursive DP), such that each number is the sum of the two preceding ones, starting from 0 and 1.
 const FibonacciRecursiveDP = (stairs) => {
   if (stairs <= 0) return 0
   if (stairs === 1) return 1
@@ -48,17 +51,7 @@ const FibonacciRecursiveDP = (stairs) => {
   return res
 }
 
-// Algorithms
-// Calculates Fibonacci(n) such that Fibonacci(n) = Fibonacci(n - 1) + Fibonacci(n - 2)
-// Fibonacci(0) = Fibonacci(1) = 1
-// Uses a bottom up dynamic programming approach
-// Solve each sub-problem once, using results of previous sub-problems
-// which are n-1 and n-2 for Fibonacci numbers
-// Although this algorithm is linear in space and time as a function
-// of the input value n, it is exponential in the size of n as
-// a function of the number of input bits
-// @Satzyakiz
-
+//  Fibonacci sequence (Iterative DP), such that each number is the sum of the two preceding ones, starting from 0 and 1.
 const FibonacciDpWithoutRecursion = (number) => {
   const table = []
   table.push(1)
@@ -70,7 +63,6 @@ const FibonacciDpWithoutRecursion = (number) => {
 }
 
 // Using Matrix exponentiation to find n-th fibonacci in O(log n) time
-
 const copyMatrix = (A) => {
   return A.map(row => row.map(cell => cell))
 }
@@ -82,8 +74,7 @@ const Identity = (size) => {
   }))
 }
 
-// A of size (l x m) and B of size (m x n)
-// product C will be of size (l x n)
+// Multiply of matrices 
 const matrixMultiply = (A, B) => {
   A = copyMatrix(A)
   B = copyMatrix(B)
@@ -107,7 +98,7 @@ const matrixMultiply = (A, B) => {
  * @param {*} A the square matrix
  * @param {*} n the exponent
  */
-// A is a square matrix
+// square matrix
 const matrixExpo = (A, n) => {
   A = copyMatrix(A)
 

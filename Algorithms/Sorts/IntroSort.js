@@ -1,26 +1,11 @@
 /**
- * @function Intosort (As implemented in STD C++ Lib)
- * The function performs introsort which is used in
- * C++ Standard LIbrary, the implemntation is inspired from]
- * library routine itself.
- * ALGORITHM:
- * 1) It performs quicksort on array until the recursion depth
- *    exceeds a pre determined limit.
- * 2) If the limit is reached it switches to heapsort
- * 3) For array size less than a threshold(16) directly
- *    does insertion sort on array
- * @param {Array} array the array to be sorted
- * @param {Function} compare the comparison function
- *
- * @see [Introsort](https://en.wikipedia.org/wiki/Introsort)
- * @author [Lakhan Nad](https://github.com/Lakhan-Nad)
+ * The function performs introsort
  */
 function introsort (array, compare) {
   /**
-   * @function Default Comparison Function
+   * Default Comparison Function
    * This function is same as implemented by
    * Array.sort method
-   * @see [StackOverflow](https://stackoverflow.com/questions/47334234/how-to-implement-array-prototype-sort-default-compare-function)
    * @param {*} a variable 1
    * @param {*} b variable 2
    * @returns {Number}
@@ -39,7 +24,6 @@ function introsort (array, compare) {
     return 0
   }
   /**
-   * @function helper function for defaultComparator
    * Converts a given object to String
    * @throws TypeError()
    * @param {Object} obj
@@ -55,8 +39,7 @@ function introsort (array, compare) {
     return obj.toString()
   }
   /**
-   * Checks if the value passed is an array
-   * or not
+   * Checks if the value passed is an array or not
    */
   if (Array.isArray(array) === false) {
     return
@@ -72,7 +55,6 @@ function introsort (array, compare) {
   /**
    * Use a closure to define the whole sort
    * implementation this is done through
-   * [IIFE](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
    */
   return (function (array, comparator) {
     var swap = function (index1, index2) {
@@ -117,10 +99,7 @@ function introsort (array, compare) {
     insertionSort(0, len)
     /** *********************  Implementation of various routines  **************************/
     /**
-     * @function
-     * This is recursive quicksort implementation in array
-     * of segment [start,last-1]
-     * [QuickSort](https://en.wikipedia.org/wiki/Quicksort)
+     * This is recursive quicksort implementation in array of segment
      * @param {Number} start the start index of array segment to be sorted
      * @param {Number} last  one more than the last index of array segment
      * @param {Number} depth this measures how many recursive calls are done
@@ -139,7 +118,7 @@ function introsort (array, compare) {
       quickSort(pivot + 1, last, depth - 1)
     }
     /**
-     * @function Helper function to quicksort
+     * Function to partition arrays
      * @param {Number} start the start of array segment to partitiion
      * @param {Number} last  one more than last index of the array segment
      * @param {Number} pivot the index of pivot to be used
@@ -168,9 +147,7 @@ function introsort (array, compare) {
       return hi
     }
     /**
-     * @function
      * Performs insertion sort on array of range
-     * [start, last-1]
      * @param {Number} start the first index of array segment to be sorted
      * @param {Number} last  one more than last index of array to be sorted
      */
@@ -240,68 +217,3 @@ function introsort (array, compare) {
     }
   })(array, compare)
 }
-
-/**
- * @example Demo run of the sort routine
- * The data is randomly generated
- * Prints RIGHT:) if the sort routine worked as expected
- * If not prints WRONG!!
- */
-(function demo () {
-  const data = []
-  const size = 1000000
-  var i = 0
-  var temp
-  var c = function (a, b) {
-    return a - b
-  }
-  for (i = 0; i < size; i++) {
-    temp = Math.random() * Number.MAX_SAFE_INTEGER
-    data.push(temp)
-  }
-  introsort(data, c)
-  var faulty = false
-  for (i = 1; i < size; i++) {
-    if (data[i] < data[i - 1]) {
-      faulty = true
-      break
-    }
-  }
-  if (faulty) {
-    console.log('WRONG!!')
-  } else {
-    console.log('RIGHT:)')
-  }
-})();
-
-/**
- * @example Demo run of the sort routine
- * using the default compare function and
- * comparing the results with Array.sort
- */
-(function demo () {
-  const data = []
-  const data2 = []
-  const size = 1000000
-  var i = 0
-  var temp
-  for (i = 0; i < size; i++) {
-    temp = Math.random() * Number.MAX_SAFE_INTEGER
-    data.push(temp)
-    data2.push(temp)
-  }
-  introsort(data)
-  data2.sort()
-  var faulty = false
-  for (i = 1; i < size; i++) {
-    if (data[i] !== data2[i]) {
-      faulty = true
-      break
-    }
-  }
-  if (faulty) {
-    console.log('WRONG Implented Comparator!!')
-  } else {
-    console.log('Comparator Works Fine:)')
-  }
-})()

@@ -1,8 +1,4 @@
-/*
- * Shell Sort sorts an array based on  insertion sort algorithm
- * more information: https://en.wikipedia.org/wiki/Shellsort
- *
- */
+// Implementation of shellSort
 function shellSort (items) {
   var interval = 1
 
@@ -26,7 +22,6 @@ function shellSort (items) {
   return items
 }
 
-// Implementation of shellSort
 
 var ar = [5, 6, 7, 8, 1, 2, 12, 14]
 // Array before Sort

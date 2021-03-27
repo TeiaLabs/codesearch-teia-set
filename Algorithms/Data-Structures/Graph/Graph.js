@@ -1,3 +1,4 @@
+// Create a graph class
 class Graph {
   constructor () {
     this.adjacencyMap = {}

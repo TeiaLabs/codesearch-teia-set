@@ -1,14 +1,6 @@
 /**
  * Interpolation Search
- *
- * Time Complexity:
- * -Best case: O(1)
- * -Worst case: O(n)
- * -O((log(log(n))) If the data are uniformly distributed
- *
- *
  */
-
 function interpolationSearch (arr, key) {
   const length = arr.length - 1
   let low = 0

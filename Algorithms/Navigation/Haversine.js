@@ -1,6 +1,5 @@
 /*
-  Calculate the distance between two coordinates using the haversine formula
-  More about: https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Haversine
+  Calculate the haversine distance 
   @Param {number} latitude1
   @Param {number} latitude2
   @Param {number} longitude1

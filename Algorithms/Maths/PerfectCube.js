@@ -1,9 +1,6 @@
 /**
- * Author: dephraiim
- * License: GPL-3.0 or later
- *
+ * Check if the cube is symmetric
  */
-
 const perfectCube = (num) => Math.round(num ** (1 / 3)) ** 3 === num
 
 export { perfectCube }

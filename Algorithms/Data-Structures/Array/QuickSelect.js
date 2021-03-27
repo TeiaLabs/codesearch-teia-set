@@ -5,16 +5,12 @@
  * -QuickSelect is related to QuickSort, thus has optimal best and average
  *  case (O(n)) but unlikely poor worst case (O(n^2))
  * -This implementation uses randomly selected pivots for better performance
- *
- * @complexity: O(n) (on average )
- * @complexity: O(n^2) (worst case)
- * @flow
  */
-
 function QuickSelect (items, kth) {
   return RandomizedSelect(items, 0, items.length - 1, kth)
 }
 
+// Algorithm to find the ith smallest number
 function RandomizedSelect (
   items,
   left,
@@ -32,12 +28,14 @@ function RandomizedSelect (
   return RandomizedSelect(items, pivotIndex + 1, right, i - k)
 }
 
+// Randomize two arrays
 function RandomizedPartition (items, left, right) {
   const rand = getRandomInt(left, right)
   Swap(items, rand, right)
   return Partition(items, left, right)
 }
 
+// Partition a array into two arrays
 function Partition (items, left, right) {
   const x = items[right]
   let pivotIndex = left - 1
@@ -54,10 +52,12 @@ function Partition (items, left, right) {
   return pivotIndex + 1
 }
 
+// Get random values between min and max parameters
 function getRandomInt (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
+// Swap array values
 function Swap (arr, x, y) {
   [arr[x], arr[y]] = [arr[y], arr[x]]
 }

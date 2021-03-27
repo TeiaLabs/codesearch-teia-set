@@ -1,5 +1,5 @@
 /*
-    author: Theepag
+    Calcule the factorial value
  */
 const factorialize = (num) => {
   // Step 1. variable result to store num
@@ -11,7 +11,7 @@ const factorialize = (num) => {
     num-- // decrement 1 at each iteration
     result = result * num // or result = result * num;
   }
-  // Step 3. Return the factorial
+
   return result
 }
 // test

@@ -1,17 +1,4 @@
-/*
-    author: PatOnTheBack
-    license: GPL-3.0 or later
-
-    Modified from:
-        https://github.com/TheAlgorithms/Python/blob/master/maths/findLcm.py
-
-    More about LCM:
-        https://en.wikipedia.org/wiki/Least_common_multiple
-*/
-
-'use strict'
-
-// Find the LCM of two numbers.
+// Find the Least common multiple of two numbers.
 const findLcm = (num1, num2) => {
   // If the input numbers are less than 1 return an error message.
   if (num1 < 1 || num2 < 1) {

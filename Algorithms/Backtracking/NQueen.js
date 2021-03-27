@@ -1,11 +1,13 @@
+// Class to solve problem of placing N chess queens on an N×N 
+// chessboard so that no two queens attack each other
 class NQueen {
   constructor (size) {
     this.board = new Array(size).fill('.').map(() => new Array(size).fill('.'))
     this.size = size
   }
 
+  // function to check if the placement of the queen in the given location is valid
   isValid ([row, col]) {
-    // function to check if the placement of the queen in the given location is valid
 
     // checking the left of the current row
     for (let i = 0; i < col; i++) {
@@ -25,8 +27,8 @@ class NQueen {
     return true
   }
 
+  // function to solve the board
   solve (col = 0) {
-    // function to solve the board
     if (col >= this.size) { return true }
 
     for (let i = 0; i < this.size; i++) {
@@ -43,8 +45,8 @@ class NQueen {
     return false
   }
 
+  // utility function to display the board
   printBoard () {
-    // utility function to display the board
     for (const row of this.board) {
       console.log(...row)
     }

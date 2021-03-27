@@ -1,21 +1,4 @@
-/*
-* Quick sort is a comparison sorting algorithm that uses a divide and conquer strategy.
-* For more information see here: https://en.wikipedia.org/wiki/Quicksort
-*/
-
-/*
-*  Doctests
-*
-*  > quickSort([5, 4, 3, 10, 2, 1])
-*  [1, 2, 3, 4, 5, 10]
-*  > quickSort([])
-*  []
-* > quickSort([5, 4])
-*  [4, 5]
-*  > quickSort([1, 2, 3])
-*  [1, 2, 3]
-*/
-
+// Implementation of quick sort
 function quickSort (items) {
   var length = items.length
 
@@ -41,7 +24,6 @@ function quickSort (items) {
   return sorted
 }
 
-// Implementation of quick sort
 
 var ar = [0, 5, 3, 2, 2]
 // Array before Sort

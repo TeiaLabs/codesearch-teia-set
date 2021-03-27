@@ -1,8 +1,4 @@
-/*
-  Pangram is a sentence that contains all the letters in the alphabet
-  https://en.wikipedia.org/wiki/Pangram
- */
-
+// Check if string is a Pangram 
 const checkPangram = (string) => {
   if (typeof string !== 'string') {
     throw new TypeError('The given value is not a string')

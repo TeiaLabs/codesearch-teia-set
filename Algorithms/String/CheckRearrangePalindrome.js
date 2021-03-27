@@ -1,9 +1,5 @@
 /**
-  * What is a palindrome? https://en.wikipedia.org/wiki/Palindrome
-  * Receives a string and returns whether it can be rearranged to become a palindrome or not
-  * The string can only be a palindrome if the count of ALL characters is even or if the ONLY ONE character count is odd
-  * Input is a string
-  *
+  * Check if string is a palindrome
   **/
 
 const palindromeRearranging = (str) => {

@@ -7,8 +7,6 @@
  * Also it implements 'length', 'last' and 'isEmpty' properties and
  * static isStack method to check is an object the instance of Stack class.
  */
-
-// Class declaration
 class Stack {
   constructor () {
     this.stack = []

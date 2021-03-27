@@ -1,5 +1,4 @@
-// Wikipedia: https://en.wikipedia.org/wiki/Reverse_Polish_notation
-
+// Reverse Polish notation
 const calcRPN = (expression) => {
   const operators = {
     '+': (a, b) => a + b,

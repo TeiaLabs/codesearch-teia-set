@@ -1,10 +1,8 @@
 /*
-  LeetCode -> https://leetcode.com/problems/longest-valid-parentheses/
-
+  longest valid parentheses 
   Given a string containing just the characters '(' and ')',
   find the length of the longest valid (well-formed) parentheses substring.
 */
-
 const longestValidParentheses = (s) => {
   const n = s.length
   const stack = []

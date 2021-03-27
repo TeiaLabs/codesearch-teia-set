@@ -1,22 +1,11 @@
-/*
-    author: PatOnTheBack
-    license: GPL-3.0 or later
-
-    Modified from:
-        https://github.com/TheAlgorithms/Python/blob/master/maths/factorial_python.py
-
-    This script will find the factorial of a number provided by the user.
-
-    More about factorials:
-        https://en.wikipedia.org/wiki/factorial
-*/
-
 'use strict'
 
+// Calcule range of num
 const calcRange = (num) => {
   return [...Array(num).keys()].map(i => i + 1)
 }
 
+// This script will find the factorial of a number provided by the user.
 const calcFactorial = (num) => {
   if (num === 0) {
     return 'The factorial of 0 is 1.'

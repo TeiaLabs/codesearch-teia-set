@@ -3,7 +3,6 @@
  * Take the number and subtract it from the floored number.
  * Return the result.
  */
-
 const decimalIsolate = (number) => {
   const ans = parseFloat((number + '').replace(/^[-\d]+./, '.'))
   return isNaN(ans) === true ? 0 : ans

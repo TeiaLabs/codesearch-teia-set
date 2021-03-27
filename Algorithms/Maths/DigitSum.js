@@ -1,6 +1,4 @@
 // program to find sum of digits of a number
-
-// function which would calculate sum and return it
 const digitSum = (num) => {
   // sum will store sum of digits of a number
   let sum = 0

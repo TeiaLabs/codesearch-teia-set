@@ -1,9 +1,5 @@
 /*
-  Calculate the area of various shapes
-
   Calculate the Surface Area of a Cube.
-  Example: surfaceAreaCube(1) will return 6
-  More about: https://en.wikipedia.org/wiki/Area#Surface_area
  */
 const surfaceAreaCube = (sideLength) => {
   validateNumericParam(sideLength, 'sideLength')
@@ -12,8 +8,6 @@ const surfaceAreaCube = (sideLength) => {
 
 /*
   Calculate the Surface Area of a Sphere.
-  Wikipedia reference: https://en.wikipedia.org/wiki/Sphere
-  return 4 * pi * r^2
 */
 const surfaceAreaSphere = (radius) => {
   validateNumericParam(radius, 'radius')
@@ -22,8 +16,6 @@ const surfaceAreaSphere = (radius) => {
 
 /*
   Calculate the area of a rectangle
-  Wikipedia reference: https://en.wikipedia.org/wiki/Area#Quadrilateral_area
-  return width * length
 */
 const areaRectangle = (length, width) => {
   validateNumericParam(length, 'Length')
@@ -41,8 +33,6 @@ const areaSquare = (sideLength) => {
 
 /*
   Calculate the area of a triangle
-  Wikipedia reference: https://en.wikipedia.org/wiki/Area#Triangle_area
-  return base * height / 2
 */
 const areaTriangle = (base, height) => {
   validateNumericParam(base, 'Base')
@@ -52,7 +42,6 @@ const areaTriangle = (base, height) => {
 
 /*
   Calculate the area of a parallelogram
-  Wikipedia reference: https://en.wikipedia.org/wiki/Area#Dissection,_parallelograms,_and_triangles
 */
 const areaParallelogram = (base, height) => {
   validateNumericParam(base, 'Base')
@@ -80,7 +69,6 @@ const areaCircle = (radius) => {
 
 /*
   Calculate the area of a rhombus
-  Wikipedia reference: https://en.wikipedia.org/wiki/Rhombus
 */
 const areaRhombus = (diagonal1, diagonal2) => {
   validateNumericParam(diagonal1, 'diagonal one')

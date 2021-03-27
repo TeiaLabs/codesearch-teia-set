@@ -1,13 +1,11 @@
 /**
- * @author Nandan V
- * Sunday, 26 July 2020 8:33 AM
- * @description Singleton class that handles the <b>timing of tests</b> and
- *   specs. <br/> The class is singleton as <u>javascript does not support
- *   multiple timer instances<u/>.
+ * Singleton class that handles the timing of tests and
+ * specs. <br/> The class is singleton as <u>javascript does not support
+ * multiple timer instances<u/>.
  */
 class IntervalTimer {
   /**
-   * @description Constructor for Timer.
+   * Constructor for Timer.
    * @param interval Sets the interval for running the timer.
    * @param callBack The callback function to be executed.
    * @return {IntervalTimer} If exists, the existing object.
@@ -25,14 +23,14 @@ class IntervalTimer {
   }
 
   /**
-   * @description Starts the timer.
+   * Starts the timer.
    */
   startTimer () {
     this.timer = setInterval(this.callBack, this.interval)
   }
 
   /**
-   * @description Resets the timer.
+   * Resets the timer.
    * @return {number} Elapsed time in milliseconds.
    */
   resetTimer () {
@@ -42,7 +40,7 @@ class IntervalTimer {
   }
 
   /**
-   * @return {number} Elapsed time in milliseconds since reset.
+   * Elapsed time in milliseconds since reset.
    */
   getElapsedTime (offset = 0) {
     this.timeElapsed = this.timer - this.prevInterval
@@ -51,7 +49,7 @@ class IntervalTimer {
   }
 
   /**
-   * @return {number} Elapsed time since start.
+   * Elapsed time since start.
    */
   getRunTime () {
     return this.timer

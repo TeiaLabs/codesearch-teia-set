@@ -1,3 +1,4 @@
+// Calcule the number of combinations of getting change for amount
 function change (coins, amount) {
   const combinations = new Array(amount + 1).fill(0)
   combinations[0] = 1
@@ -12,8 +13,8 @@ function change (coins, amount) {
   return combinations[amount]
 }
 
+// minimumCoins[i] will store the minimum coins needed for amount i
 function minimumCoins (coins, amount) {
-  // minimumCoins[i] will store the minimum coins needed for amount i
   const minimumCoins = new Array(amount + 1).fill(0)
 
   minimumCoins[0] = 0

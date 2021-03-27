@@ -1,5 +1,5 @@
+// Disjoint Set Node to store the parent and rank
 class DisjointSetTreeNode {
-  // Disjoint Set Node to store the parent and rank
   constructor (key) {
     this.key = key
     this.parent = this
@@ -7,33 +7,33 @@ class DisjointSetTreeNode {
   }
 }
 
+// Disjoint Set DataStructure
 class DisjointSetTree {
-  // Disjoint Set DataStructure
   constructor () {
     // map to from node name to the node object
     this.map = {}
   }
 
+  // Function to create a new set with x as its member
   makeSet (x) {
-    // Function to create a new set with x as its member
     this.map[x] = new DisjointSetTreeNode(x)
   }
 
+  // Function to find the set x belongs to (with path-compression)
   findSet (x) {
-    // Function to find the set x belongs to (with path-compression)
     if (this.map[x] !== this.map[x].parent) {
       this.map[x].parent = this.findSet(this.map[x].parent.key)
     }
     return this.map[x].parent
   }
 
+  // Function to merge 2 disjoint sets
   union (x, y) {
-    // Function to merge 2 disjoint sets
     this.link(this.findSet(x), this.findSet(y))
   }
 
+  // Helper function for union operation
   link (x, y) {
-    // Helper function for union operation
     if (x.rank > y.rank) {
       y.parent = x
     } else {
@@ -45,31 +45,30 @@ class DisjointSetTree {
   }
 }
 
+// Weighted Undirected Graph class
 class GraphWeightedUndirectedAdjacencyList {
-  // Weighted Undirected Graph class
   constructor () {
     this.connections = {}
     this.nodes = 0
   }
 
+  // Function to add a node to the graph (connection represented by set)
   addNode (node) {
-    // Function to add a node to the graph (connection represented by set)
     this.connections[node] = {}
     this.nodes += 1
   }
 
+  // Function to add an edge (adds the node too if they are not present in the graph)
   addEdge (node1, node2, weight) {
-    // Function to add an edge (adds the node too if they are not present in the graph)
     if (!(node1 in this.connections)) { this.addNode(node1) }
     if (!(node2 in this.connections)) { this.addNode(node2) }
     this.connections[node1][node2] = weight
     this.connections[node2][node1] = weight
   }
 
+  // Kruskal's Algorithm to generate a Minimum Spanning Tree (MST) of a graph
+  // getting the edges in ascending order of weights
   KruskalMST () {
-    // Kruskal's Algorithm to generate a Minimum Spanning Tree (MST) of a graph
-    // Details: https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
-    // getting the edges in ascending order of weights
     const edges = []
     const seen = new Set()
     for (const start of Object.keys(this.connections)) {

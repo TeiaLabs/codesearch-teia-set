@@ -1,24 +1,4 @@
-/****************************************************************************
- * Fibonacci Search JavaScript Implementation
- * Author   Alhassan Atama Isiaka
- * Version v1.0.0
- * Copyright 2020
- * https://github.com/komputarist
- *
- * This implementation is based on Generalizing the Fibonacci search we
- * define the Fibonacci search of degree K. Like the Fibonacci search,
- * which it reduces to for K = 2, the Fibonacci search of degree K
- * involves only addition and subtraction.
- *  Capocelli R.M. (1991) A Generalization of the Fibonacci Search. In:
- * Bergum G.E., Philippou A.N., Horadam A.F. (eds) Applications of Fibonacci
- * Numbers. Springer, Dordrecht. https://doi.org/10.1007/978-94-011-3586-3_9
- *
- * This snippet is free. Feel free to improve on it
- *
- * We define a function fibonacciSearch() that takes an array of numbers,
- * the item (number) to be searched for and the length of the items in the array
- ****************************************************************************/
-
+// Fibonacci Search 
 const fibonacciSearch = (arr, x, n) => {
   let fib2 = 0 // (K-2)'th Fibonacci Number
   let fib1 = 1 // (K-1)'th Fibonacci Number.

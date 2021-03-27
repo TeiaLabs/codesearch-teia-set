@@ -1,8 +1,6 @@
 /**
   * Check and count occurrence of each word in a string
-  * Inputs a String eg. Madonna and Boolean
   **/
-
 const checkWordOccurrence = (str, isCaseSensitive = false) => {
   if (typeof str !== 'string') {
     throw new TypeError('The first param should be a string')

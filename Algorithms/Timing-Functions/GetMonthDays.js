@@ -5,7 +5,6 @@
   e.g.: mahfoudh.arous@gmail.com -> true
   e.g.: mahfoudh.arous.com ->false
 */
-
 const getMonthDays = (monthNumber, year) => {
   const the31DaysMonths = [1, 3, 5, 7, 8, 10, 12]
   const the30DaysMonths = [4, 6, 9, 11]

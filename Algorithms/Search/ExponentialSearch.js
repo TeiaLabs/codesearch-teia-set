@@ -1,14 +1,6 @@
 /**
- * Exponential Search
- *
- * The algorithm consists of two stages. The first stage determines a
- * range in which the search key would reside if it were in the list.
- * In the second stage, a binary search is performed on this range.
- *
- *
- *
+ * Binary Search algorithm
  */
-
 function binarySearch (arr, x, floor, ceiling) {
   // Middle index
   const mid = Math.floor((floor + ceiling) / 2)
@@ -31,6 +23,7 @@ function binarySearch (arr, x, floor, ceiling) {
   }
 }
 
+// Exponential Search algorithm
 function exponentialSearch (arr, length, value) {
   // If value is the first element of the array return this position
   if (arr[0] === value) {

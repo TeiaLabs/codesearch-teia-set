@@ -1,3 +1,4 @@
+// Calculete pow
 // Returns the value of x to the power of y
 
 const pow = (x, y) => {

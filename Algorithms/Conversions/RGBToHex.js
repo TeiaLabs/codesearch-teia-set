@@ -1,3 +1,4 @@
+// Converting RGB string to Hexadecimal values (color)
 function RGBToHex (r, g, b) {
   if (
     typeof r !== 'number' ||

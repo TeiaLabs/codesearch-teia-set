@@ -1,3 +1,4 @@
+// Converting Decimal to Binary values
 function decimalToBinary (num) {
   var bin = []
   while (num > 0) {

@@ -1,14 +1,8 @@
 /*
-  Modified from:
-    https://github.com/TheAlgorithms/Python/blob/master/maths/prime_check.py
-
-  Complexity:
-    O(sqrt(n))
+  Chech if number is prime
 */
 
 const PrimeCheck = (n) => {
-  // input: n: int
-  // output: boolean
   if (n === 1) return false
   if (n === 0) return false
 

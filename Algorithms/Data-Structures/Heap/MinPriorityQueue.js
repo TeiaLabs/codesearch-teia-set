@@ -8,9 +8,6 @@
 * or less than the parent. This makes it a min priority queue
 * or max priority queue.
 */
-
-// Functions: insert, delete, peek, isEmpty, print, heapSort, sink
-
 class MinPriorityQueue {
   // calls the constructor and initializes the capacity
   constructor (c) {

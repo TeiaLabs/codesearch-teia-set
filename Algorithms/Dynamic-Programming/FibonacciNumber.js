@@ -1,5 +1,4 @@
-//  https://en.wikipedia.org/wiki/Fibonacci_number
-
+//  Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
 const fibonacci = (N) => {
   // creating array to store values
   const memo = new Array(N + 1)

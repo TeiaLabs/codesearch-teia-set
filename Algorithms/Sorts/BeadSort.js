@@ -1,24 +1,9 @@
 /**
- * Bead Sort, also known as Gravity sort, this algorithm was
+ * Bead Sort or Gravity sort, this algorithm was
  * inspired from natural phenomenons and was designed keeping in mind objects(or beads)
  * falling under the influence of gravity.
- *
  * NOTE: It only works for arrays of positive integers.
- *
- * Wikipedia: https://en.wikipedia.org/wiki/Bead_sort
  */
-
-/**
- * Doctests
- *
- * > beadSort([5, 4, 3, 2, 1])
- * [1, 2, 3, 4, 5]
- * > beadSort([7, 9, 4, 3, 5])
- * [3, 4, 5, 7, 9]
- * > beadSort([-1, 5, 8, 4, 3, 19])
- * ! RangeError: Sequence must be a list of positive integers!
- */
-
 function beadSort (sequence) {
   /* Let's ensure our sequence has only Positive Integers */
   if (sequence.some((integer) => integer < 0)) {

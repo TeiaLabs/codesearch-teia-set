@@ -1,12 +1,6 @@
-// Problem Statement => https://www.youtube.com/watch?v=lBRtnuxg-gU
-
+// Minimum Cost Path Dynamic Programming
+// Find the min cost path from top-left to bottom-right in matrix
 const minCostPath = (matrix) => {
-  /*
-        Find the min cost path from top-left to bottom-right in matrix
-        >>> minCostPath([[2, 1], [3, 1], [4, 2]])
-        >>> 6
-    */
-
   const n = matrix.length
   const m = matrix[0].length
 

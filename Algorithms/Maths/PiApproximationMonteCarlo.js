@@ -1,6 +1,5 @@
-// Wikipedia: https://en.wikipedia.org/wiki/Monte_Carlo_method
-// Video Explaination: https://www.youtube.com/watch?v=ELetCV_wX_c
 
+// Create a Monte Carlo method
 const piEstimation = (iterations = 100000) => {
   let circleCounter = 0
 

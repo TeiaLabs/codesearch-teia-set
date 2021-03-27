@@ -5,7 +5,6 @@
  * It is used to find the shortes path.
  * It uses graph data structure.
  */
-
 function createGraph (V, E) {
   // V - Number of vertices in graph
   // E - Number of edges in graph (u,v,w)
@@ -20,6 +19,7 @@ function createGraph (V, E) {
   return adjList
 }
 
+// Dijkstra's Algorithm to find the shortes path
 function djikstra (graph, V, src) {
   const vis = Array(V).fill(0)
   const dist = []

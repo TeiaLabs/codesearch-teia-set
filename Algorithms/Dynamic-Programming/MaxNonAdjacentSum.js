@@ -1,10 +1,9 @@
-function maximumNonAdjacentSum (nums) {
   /*
-         * Find the maximum non-adjacent sum of the integers in the nums input list
-         * :param nums: Array of Numbers
-         * :return: The maximum non-adjacent sum
-    */
-
+  * Find the maximum non-adjacent sum of the integers in the nums input list
+  * :param nums: Array of Numbers
+  * :return: The maximum non-adjacent sum
+  */
+ function maximumNonAdjacentSum (nums) {
   if (nums.length < 0) return 0
 
   let maxIncluding = nums[0]

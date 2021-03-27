@@ -1,5 +1,4 @@
-/* Binary Search Tree!!
-*
+/* Binary Search Tree
 * Nodes that will go on the Binary Tree.
 * They consist of the data in them, the node to the left, the node
 * to the right, and the parent from which they came from.
@@ -9,8 +8,6 @@
 * smaller than the parent, and the right child is usually
 * bigger.
 */
-
-// class Node
 var Node = (function () {
   // Node in the tree
   function Node (val) {

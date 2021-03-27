@@ -1,9 +1,5 @@
-// Implementing KMP Search Algorithm to search all the instances of pattern in
-// given text
-// Reference Book: Introduction to Algorithms, CLRS
 
-// Explanation: https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/
-
+// length of proper prefix of pattern[0]...pattern[i-1] which is also proper suffix of it
 const computeLPS = (pattern) => {
   const lps = Array(pattern.length)
   lps[0] = 0
@@ -20,18 +16,12 @@ const computeLPS = (pattern) => {
   return lps
 }
 
-/**
- * Returns all indices where pattern starts in text
- * @param {*} text a big text in which pattern string is to find
- * @param {*} pattern the string to find
- */
+// Implementing KMP Search Algorithm to search all the instances of pattern in given text
 const KMPSearch = (text, pattern) => {
   if (!pattern || !text) {
     return [] // no results
   }
 
-  // lps[i] = length of proper prefix of pattern[0]...pattern[i-1]
-  //          which is also proper suffix of it
   const lps = computeLPS(pattern)
   const result = []
 

@@ -1,17 +1,8 @@
 /**
- * Adelson-Velsky and Landis Tree
- * [Wikipedia](https://en.wikipedia.org/wiki/AVL_tree)
- * [A video lecture](http://www.youtube.com/watch?v=TbvhGcf6UJU)
- */
-'use strict'
-
-/**
+ * Adelson-Velsky and Landis Tree / AVL tree 
+ * self-balancing binary search tree
  * A utility class for comparator
  * A comparator is expected to have following structure
- *
- * comp(a, b) RETURN < 0 if a < b
- * RETURN > 0 if a > b
- * MUST RETURN 0 if a == b
  */
 let utils;
 (function (_utils) {

@@ -1,37 +1,6 @@
-/* Bubble Sort is an algorithm to sort an array. It
-*  compares adjacent element and swaps thier position
-*  The big O on bubble sort in worst and best case is O(N^2).
-*  Not efficient.
-*
-*  In bubble sort, we keep iterating while something was swapped in
-*  the previous inner-loop iteration. By swapped I mean, in the
-*  inner loop iteration, we check each number if the number proceeding
-*  it is greater than itself, if so we swap them.
-*
-*  Wikipedia: https://en.wikipedia.org/wiki/Bubble_sort
-*  Animated Visual: https://www.toptal.com/developers/sorting-algorithms/bubble-sort
-*/
 
 /*
-*  Doctests
-*
-*  > bubbleSort([5, 4, 1, 2, 3])
-*  [1, 2, 3, 4, 5]
-*  > bubbleSort([])
-*  []
-*  > bubbleSort([1, 2, 3])
-*  [1, 2, 3]
-*
-*  > alternativeBubbleSort([5, 4, 1, 2, 3])
-*  [1, 2, 3, 4, 5]
-*  > alternativeBubbleSort([])
-*  []
-*  > alternativeBubbleSort([1, 2, 3])
-*  [1, 2, 3]
-*/
-
-/*
-*  Using 2 for loops
+*  Bubble Sort algorithm
 */
 function bubbleSort (items) {
   const length = items.length
@@ -63,7 +32,7 @@ console.log(bubbleSort(array1))
 console.log('\n')
 
 /*
-*  Using a while loop and a for loop
+*  Bubble Sort algorithm
 */
 function alternativeBubbleSort (arr) {
   let swapped = true

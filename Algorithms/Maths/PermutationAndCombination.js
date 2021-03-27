@@ -1,10 +1,6 @@
-/**
- * @details Calculates the number of permutations and combinations.
- * @external_link (Permutation And Combinations)[https://www.geeksforgeeks.org/permutation-and-combination/]
- */
 
 /**
- * @brief Calculates the factorial of the given number.
+ * Calculates the factorial of the given number.
  * @param num: integer
  * @details Factorial of n = n * (n - 1) * (n - 2) * ... * 1
  * @returns integer: Factorial of the number.
@@ -23,7 +19,7 @@ const factorial = (n) => {
 }
 
 /**
- * @brief Calculates the number of Permutations from the given data.
+ * Calculates the number of Permutations from the given data.
  * @param
  * n: integer -> number of items.
  * r: integer -> number of times n is taken.
@@ -35,7 +31,7 @@ const permutation = (n, r) => {
 }
 
 /**
- * @brief Calculates the number of Combinations from the given data.
+ * Calculates the number of Combinations from the given data.
  * @param
  * n -> number of items.
  * r -> number of times n is taken.

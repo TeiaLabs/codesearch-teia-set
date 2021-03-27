@@ -1,10 +1,4 @@
-/* The Jump Search algorithm allows to combine a linear search with a speed optimization.
-  * This means that instead of going 1 by 1, we will increase the step of √n and increase that
-  * step of √n which make the step getting bigger and bigger.
-  * The asymptotic analysis of Jump Search is o(√n). Like the binary search, it needs to be sorted.
-  * The advantage against binary search is that Jump Search traversed back only once.
- */
-
+// Jump Search algorithm 
 const jumpSearch = (arr, value) => {
   const length = arr.length
   let step = Math.floor(Math.sqrt(length))

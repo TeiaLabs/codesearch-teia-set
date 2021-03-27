@@ -1,12 +1,5 @@
 /**
- * Polynomials are algebraic expressions consisting of two or more algebraic terms.
- * Terms of a polynomial are:
- * 1. Coefficients e.g. 5, 4 in 5x^0, 4x^3 respectively
- * 2. Variables e.g. y in 3y^2
- * 3. Exponents e.g. 5 in y^5
- *
- * Class Polynomial constructs the polynomial using Array as an argument.
- * The members of array are coefficients and their indexes as exponents.
+ * Constructs the polynomial using Array as an argument.
  */
 class Polynomial {
   constructor (array) {
@@ -16,7 +9,7 @@ class Polynomial {
   }
 
   /**
-   * Function to construct the polynomial in terms of x using the coefficientArray
+   * Construct the polynomial in terms of x using the coefficientArray
    */
   construct () {
     this.polynomial = this.coefficientArray

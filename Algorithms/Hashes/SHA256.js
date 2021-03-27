@@ -1,8 +1,6 @@
 //= ===============================================================
-// SHA256.js
 //
 // Module that replicates the SHA-256 Cryptographic Hash
-// function in Javascript.
 //= ===============================================================
 
 // main variables

@@ -1,8 +1,6 @@
 /*
-  Given a string of words or phrases, count the number of vowels.
-  Example: input = "hello world" return 3
+  Count the number of vowels
  */
-
 const checkVowels = (value) => {
   if (typeof value !== 'string') {
     throw new TypeError('The first param should be a string')
