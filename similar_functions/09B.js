@@ -5,10 +5,10 @@
  function toArray(obj) {
 
     length = obj.length
-    var a = new Array(length)
+    var box = new Array(length)
     
     for (var j=0; j<length; j++)
-        a[j] = obj[j]
+        box[j] = obj[j]
 
-    return a
+    return box
 }
