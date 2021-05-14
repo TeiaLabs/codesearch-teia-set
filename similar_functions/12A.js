@@ -1,8 +1,4 @@
-/**
- * @function
- * @description Return a random number between min and max (inclusive)
- */
- function getRandomNumberInclusive(min, max) {
+function getRandomNumberInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
 

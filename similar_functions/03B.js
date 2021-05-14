@@ -1,9 +1,5 @@
-/**
- * @function
- * @description Check if a string contains a substring
- */
- function indexOfSearch(string, substring) {
+function indexOfSearch(string, substring) {
     if (string.indexOf(substring) !== -1)
-      return true; 
-    return false; 
+      return true;
+    return false;
   }

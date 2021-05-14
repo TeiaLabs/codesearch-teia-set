@@ -1,9 +1,4 @@
-/**
- * @function
- * @description We accept string, object, or buffer for this parameter.
- * in the case of string we serialize it to utf8.
- */
- function serializeLongString (b, string) {
+function serializeLongString (b, string) {
   if (typeof(string) == 'string') {
     var byteLength = Buffer.byteLength(string, 'utf8');
     serializeInt(b, 4, byteLength);

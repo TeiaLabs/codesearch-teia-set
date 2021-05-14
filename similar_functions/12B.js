@@ -1,8 +1,4 @@
-/**
- * @function
- * @description Return a random number between min and max (inclusive)
- */
- function getRandomNumber(bottom, top) {
+function getRandomNumber(bottom, top) {
   bottom = Math.ceil(bottom);
   top = Math.floor(top);
 

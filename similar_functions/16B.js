@@ -1,8 +1,4 @@
-/**
- * @function
- * @description Parse Network Byte Order integers. size can be 1,2,4,8
- */
-  function parseInt(buffer, size) {
+function parseInt(buffer, size) {
   if (size==1)
       return buffer[buffer.read++];
 

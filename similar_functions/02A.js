@@ -1,7 +1,3 @@
-/**
- * @function
- * @description Remove all occurrences of a specific item from an array
- */
  function removeItemAll(arr, value) {
   var i = 0;
   while (i < arr.length) {

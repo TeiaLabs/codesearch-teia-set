@@ -1,10 +1,4 @@
-/**
- * @function
- * @description Save our position so that we can go back and
- * write the byte length of this array at the beginning of
- * the packet (once we have serialized all elements).
- */
- function serializeArray (b, arr) {
+function serializeArray (b, arr) {
   var lengthIndex = b.used;
   b.used += 4; // sizeof long
   var startIndex = b.used;

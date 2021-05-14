@@ -1,7 +1,3 @@
-/**
- * @function
- * @description Parse Network Byte Order integers. size can be 1,2,4,8
- */
 function parseInt (buffer, size) {
   switch (size) {
     case 1:

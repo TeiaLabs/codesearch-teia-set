@@ -1,8 +1,4 @@
-/**
- * @function
- * @description Loop through an array
- */
- function arrayLoopSequential(string) {
+function arrayLoopSequential(string) {
 
     var arrayLength = string.length;
 
